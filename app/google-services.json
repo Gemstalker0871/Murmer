@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "728819013966",
+    "project_id": "murmer-daa34",
+    "storage_bucket": "murmer-daa34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728819013966:android:c535b4af2379cd5022661f",
+        "android_client_info": {
+          "package_name": "com.example.murmer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJq06wL-3Pes7kPVgQOptX9IZP2Acx0fA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

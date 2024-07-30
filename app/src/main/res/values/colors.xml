@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkred">#810606</color>
+    <color name="darkgrey">#433F3F</color>
+    <color name="darkmaroon">#400000</color>
+    <color name="darkpurple">#1e1329</color>
+    <color name="lightpurple">#8959AD</color>
+    <color name="blood">#8d0000</color>
+    <color name="brightred">#ee2e2f</color>
+</resources>
