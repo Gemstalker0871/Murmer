@@ -92,7 +92,7 @@ public class UserNameActivity extends AppCompatActivity {
             userModel.setUsername(username);
         }
         else{
-            userModel = new UserModel(username, Timestamp.now(),phoneno);
+            userModel = new UserModel(username, Timestamp.now(),phoneno, FirebaseUtil.currentUserId());
         }
 
         FirebaseUtil.currentUserDetails().set(userModel).addOnCompleteListener(new OnCompleteListener<Void>() {

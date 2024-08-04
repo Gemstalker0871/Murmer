@@ -2,12 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/gradient2"
     android:id="@+id/main"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
+    tools:context=".ChatActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,13 +18,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search User"
+            android:text="Username"
             android:textSize="20sp"
             android:layout_centerVertical="true"
             android:textStyle="bold"
             android:textColor="@color/white"
+            android:layout_toRightOf="@+id/profileviewinchat"
+            android:padding="10dp"
+            android:id="@+id/other_username"/>
+
+        <include layout="@layout/profile_pic_view"
+            android:layout_width="48dp"
+            android:layout_centerVertical="true"
+            android:layout_height="48dp"
+            android:layout_marginStart="-10dp"
             android:layout_toRightOf="@+id/backbtn"
-            android:padding="10dp"/>
+            android:id="@+id/profileviewinchat"/>
 
         <ImageButton
             android:id="@+id/backbtn"
@@ -40,50 +48,51 @@
 
     </RelativeLayout>
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/secondtoolbar"
+        android:id="@+id/chat_recycler_view"
+        android:layout_above="@id/bottomlayout"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/secondtoolbar"
-        android:layout_margin="10dp"
-        android:id="@+id/search_user_layout">
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:id="@+id/bottomlayout">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_rect"
-            android:id="@+id/search_username_bar"
-            android:layout_margin="10dp"
-            android:textColor="@color/black"
-            android:hint="Username"
-            android:imeOptions="actionDone"
+            android:hint="Write Message"
             android:textColorHint="@color/darkgrey"
-            android:padding="10dp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_rect"
             android:elevation="4dp"
-            android:layout_toLeftOf="@+id/search_user_btn"/>
+            android:padding="10dp"
+            android:layout_toLeftOf="@+id/msg_send_btn"
+            android:id="@+id/chat_msg_input"/>
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/search_icon_png_vector"
+            android:id="@+id/msg_send_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:layout_alignParentEnd="true"
-            android:id="@+id/search_user_btn"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="-5dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="4dp"
-            android:layout_margin="10dp"
+            android:padding="8dp"
+            android:src="@drawable/baseline_send_24"
             app:tint="@color/blood" />
+
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/search_user_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/search_user_layout"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="0dp"
-        android:padding="10dp" />
+
 
 
 </RelativeLayout>

@@ -9,4 +9,7 @@
     <color name="lightpurple">#8959AD</color>
     <color name="blood">#8d0000</color>
     <color name="brightred">#ee2e2f</color>
+    <color name="senderlilac">#C8A2C8</color>
+    <color name="recievebeige">#C7ABAB</color>
+
 </resources>
